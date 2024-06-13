@@ -1,0 +1,364 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 10vh;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Sora', sans-serif;
+}
+
+:root {
+    --primary: rgba(185, 0, 0, 0.4);
+  }
+  
+
+section{
+    position:relative;
+    top:10vh;
+}
+
+.container{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding:16px;
+    flex-direction: column; /* deixar as div em colunas :)))*/
+}
+
+.beneficios h2 {
+    font-size: 25px;
+    font-weight: bolder; /*tipo um negrito*/
+}
+
+/*item 1*/
+.beneficios .item{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width:90%;
+    align-items:center;
+    border-bottom: 5%;
+}
+
+.beneficios .item.reverse{
+    flex-direction: row-reverse;
+}
+
+.beneficios .item.reverse .itemPhoto{
+    justify-content: right;
+}
+
+.beneficios .item .itemPhoto .imgItem{
+    display: flex;
+    justify-content: left;  
+}
+
+
+.beneficios .item .item-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 50%;
+    max-width: 50vw;
+    line-height: 2rem;
+    
+}
+
+
+.beneficios .item .item-text h3{
+    color: #b90000;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+
+
+.clientes{
+    min-height: 90vh;                /*Minimo para não passar*/
+    width: 100%;
+    background-image: linear-gradient(
+        to top,
+        rgba(185, 0, 0, 0.4),
+        rgba(255, 255, 255, 1)
+    );
+}
+
+.clientes .text {
+    text-align: left;
+
+}
+
+.clientes .text h2{
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.clientes .text p{
+    font-size: 1.2rem;
+}
+
+/*card*/
+
+.clientes .containerCards {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-top:40px;
+    padding: 0px 50px 0px 50px;  /*sem virgula*/
+}
+
+.clientes .containerCards .card {
+    display: flex;
+    flex-direction:column;
+    background-color: white;
+    padding: 40px 20px 10px 30px;
+    box-shadow: 2px 2px 6px 2px rgb(0, 0, 0, 0.4);
+    text-align: left;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+.clientes .containerCards .card .cardContent {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.clientes .containerCards .card .cardContent .person .imagePerson{
+    width: 60px;
+    height: 60px;
+    overflow: hidden; /*não vai cortar a imagem e deformar*/
+    border-radius: 100%;
+}
+
+
+.clientes .containerCards .card .cardContent .person {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.clientes .containerCards .card h3{
+    font-size: 2rem;
+    margin-bottom:1.5rem;
+    margin-top: 0.6rem;
+    margin-left: 0.3rem;
+    font-weight: bolder;
+    color:#b90000
+}
+
+.clientes .containerCards .card q{
+    font-size: 0.7rem;
+    line-height: 2rem;
+    padding-left: 30px;
+    position: relative;
+}
+
+.clientes .containerCards .card q::before{
+   content: "❝";
+   padding: 10px;
+   font-family: 'Open Sans', sans-serif;
+   font-style: italic;
+   font-size: 5rem;
+   color: rgba(185, 0, 0, 0.4);
+   position: absolute;
+   top: 5px;
+   left: -15px;
+}
+
+.clientes .containerCards .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;   /*alinhamento de itens, juntandopara as proximidades, meio*/
+    align-items: flex-end;
+    width: 40%;
+    margin-right: 20px;
+}
+
+.clientes .containerCards .left .card.vertical{
+    width: 340px;
+    height: 500px;
+    margin-top: 20px;
+}
+
+.clientes .containerCards .right{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding-top: 200px;
+}
+
+.clientes .containerCards .right .card.horizontal{
+    width: 400px;
+    height: 280px;
+}
+
+.clientes .containerCards .right .card.retangular{
+    margin-top: 20px;
+    width: 330px;
+    height: 250px;
+}
+
+
+.clientes .containerCards .card .cardContent .person .text-content{
+    margin-left: 20px;
+}
+
+.clientes .containerCards .card .cardContent .person .text-content h4{
+font-size: 1.4rem;
+font-weight: bold;
+}
+
+.clientes .containerCards .card .cardContent .person .text-content span{
+    font-size: 0.8rem;
+    color: grey;
+    margin-top: 10px;
+}
+
+
+
+
+
+@media screen and (max-width: 992px){
+    .beneficios .item{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .beneficios .item.reverse{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .beneficios .item.reverse .itemPhoto{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .beneficios .item .itemPhoto{
+        justify-content: center;
+        align-items: center;
+    }
+    .beneficios .item .item-text{
+        max-width: 100%;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .beneficios .item.reverse .item-text{
+        max-width: 100%;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+    .beneficios .item .itemPhoto{
+        width: 100%;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+    }
+
+    .beneficios .item .itemPhoto .imgItem{
+        display: flex;
+        justify-content: center;  
+    }
+
+    .clientes{
+        min-height: 90vh;                /*Minimo para não passar*/
+        width: 100%;
+        background-image: linear-gradient(
+            to top,
+            rgba(185, 0, 0, 0.4),
+            rgba(255, 255, 255, 1)
+        );
+    }
+    
+    .clientes .text {
+        text-align: left;
+    
+    }
+    
+    .clientes .text h2{
+        font-size: 2rem;
+        font-weight: bolder;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .clientes .text p{
+        font-size: 1.1rem;
+    }
+
+    .clientes .containerCards {
+        flex-direction: column;
+        padding: 0px;  
+        width: 75%;
+    }
+
+    .clientes .containerCards .left{
+        justify-content: center;   /*alinhamento de itens, juntandopara as proximidades, meio*/
+        align-items: center;
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .clientes .containerCards .right{
+        justify-content: center;  
+        align-items: center;
+        width: 100%;
+        padding-top: 0px;
+    }
+
+    .clientes .containerCards .left .card.vertical{  /*dar mais atenção nessa parte, estudar*/
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .clientes .containerCards .right .card.horizontal{
+        width: 100%;
+        height: auto;;
+        margin-top: 20px;
+    }
+    
+    .clientes .containerCards .right .card.retangular{
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .clientes .containerCards .card {
+        min-width: 100%;
+    }
+
+    .clientes .containerCards .card .cardContent .person .imagePerson{
+        width: 50px;
+        height: 50px;
+        
+    }
+
+    .clientes .containerCards .card .cardContent .person .text-content h4{
+        font-size: 1rem;
+    }
+
+    .clientes .containerCards .card .cardContent .person .text-content span{
+        font-size: 0.7rem;
+    }
+
+    .clientes .containerCards .card h3{
+        font-size: 1.5rem;
+    }
+
+    .clientes .containerCards .card q{
+        line-height: 1.5rem;
+     }
+
+     .clientes .containerCards .card q::before{
+        font-size: 3rem;
+     }
+}

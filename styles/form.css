@@ -1,0 +1,109 @@
+.contato{
+    min-height: 80vh; /*nivel de ocupação na tela. 80%*/
+    padding-top: 80px;
+}
+
+.contato .text-content h2{
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+
+.contato form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    width: 45%;   /*determinando largura do bloco form*/
+}
+
+.contato form .row{
+    display: flex;
+    margin-bottom: 23px;
+    height: 100%;  /*determinando tamanho (altura)*/
+    width: 100%;   /*determinando largura total do elemento*/ 
+}
+
+.contato form .row .input-field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;   /*determinando tamanho (largura)*/
+    margin: 0px 20px 0px 20px; /*margem dos elementos*/ 
+}
+
+.contato form .row .input-field input{
+    padding: 5px;
+    border-radius: 4px;
+    width: 100%;   /*determinando tamanho (largura)*/
+    font-size: 1.2rem;
+    border: 1px solid black;
+
+}
+
+.contato form .row .input-field label{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contato form .row .input-field textarea{
+    padding: 5px;
+    border-radius: 4px;
+    width: 100%;   /*determinando tamanho (largura)*/
+    resize: vertical;   /*regulagem do campo apenas na vertical*/
+    font-size: 1.2rem;
+    border: 1px solid black;
+
+}
+
+.contato form .buttonForm button{
+    font-size: 1.3rem;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+.error{
+    color: red;
+    padding-top: 8px;
+}
+
+@media screen and (max-width: 992px){
+    .contato .text-content h2{
+        font-size: 2rem;
+    }
+
+    .contato form{
+        width: 80%;   /*determinando largura do bloco form*/
+    }
+
+    .contato form .row{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;   
+      margin-bottom: 0px;
+    }
+
+    .contato form .row .input-field{
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+    .contato form .row .input-field input{
+        font-size: 1rem;
+    }
+
+    .contato form .row .input-field label{
+        font-size: 1rem;
+    }
+    
+    .contato form .row .input-field textarea{
+        font-size: 1rem;
+    }
+
+    .contato form .buttonForm button{
+        font-size: 1rem;
+}
+}

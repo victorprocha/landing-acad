@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang= "pt-BR">
+ <head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+  <meta name="viewport" content="width=device-width, initial=scale=1.0"/>
+
+  <meta name="description" content="Essa é a FitLife, sua academia, entre em contato conosco!"/>
+
+  <meta name="keywords" content="academia, saúde, qualidade de vida">
+  <meta name="author" content="Victor Rocha">
+  <link rel="icon" type="image/png" href="./assets/logo.png" />
+
+
+  <link rel="stylesheet" href="./styles/reset.css"/>
+  <link rel="stylesheet" href="./styles/base.css"/>
+  <link rel="stylesheet" href="./styles/header.css"/>
+  <link rel="stylesheet" href="./styles/contato.css"/>
+  <link rel="stylesheet" href="./styles/footer.css"/>
+  <link rel="stylesheet" href="./styles/form.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Sora:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Sora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   <!--fonte dos icones-->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+
+  <script src="./script/headerInteraction.js" defer></script>
+  <script src="./script/forms.js" defer></script>
+  <script src="./script/address-map.js" defer></script>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+  
+  <title>FitLife | Contato</title>
+ </head>
+
+ <body>
+    <header>
+        <nav>
+            <a href="/index.html#hero"> <img src="assets/logo.png"/> </a>
+            <ul>
+                <li><a href="/index.html#hero"> Início </a></li>
+                <li><a href="/index.html#beneficios"> beneficios </a></li>
+                <li><a href="/index.html#clientes"> clientes </a></li>
+                <li><a href="/index.html#conheca"> Sobre a academia </a></li>
+                <li><a href="#contato"> Contato </a></li>
+                <li><button>Entrar</button></li>
+            </ul>
+            <div class="menu">&#9776;</div>
+        </nav>
+    </header> 
+  <main>
+    <div class="background">
+    </div>
+    
+    <aside>
+        <ul>
+            <li><a href="#hero"> Início </a></li>
+            <li><a href="#beneficios"> beneficios </a></li>
+            <li><a href="#clientes"> clientes </a></li>
+            <li><a href="#conheca"> Sobre a academia </a></li>
+            <li><a href="#contato"> Contato </a></li>
+            <li class="buttonSidebar" ><a href=""> Entrar </a></li>
+        </ul>
+    </aside>
+
+    <section id="queremos" class="queremos">
+        <div class="container">
+            <h1>Queremos te ouvir</h1>
+            <h3>
+                Mande sua mensagem com sua dúvida para nós ou veja a localização da 
+                nossa academia abaixo
+            </h3>
+        </div>
+
+    </section>
+
+   <section id="contato" class="contato">
+    <div class="container"> 
+         <div class="text-content">
+            <h2>Fale conosco</h2>
+        </div>
+
+        
+        <form onsubmit="handleSubmit(event)" >
+            <div class="row">   <!-- div row para fazer a junção de dois elementos em uma linhas lá (flexbox) kakaka -->
+                <div class="input-field"> 
+                    <label for="name">Name:</label>
+                    <input placeholder="nome" id="name" name="name" type="text"/>   
+                    <span id="name-error" class="error"></span>
+                </div>
+                
+                <div class="input-field">
+                    <label for="lastName">Sobrenome</label>
+                    <input placeholder="Sobrenome" id="lastName" name="lastName" type="text" />
+                    <span id="lastName-error" class="error"></span>
+                </div>
+                
+            </div>
+
+
+            <div class="row">
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input placeholder="Seu email" id="email" name="email" type="email" />
+                    <span id="email-error" class="error"></span>
+                </div>
+               
+                <div class="input-field">
+                    <label for="telefone">Telefone</label>
+                    <input placeholder="(xx) 9 9999-9999" maxlength="16" id="telefone" name="telefone" type="text"  
+                     oninput="formatarTelefone(this)"/>
+                    <span id="telefone-error" class="error"></span>
+                </div>
+                
+            </div>
+
+
+            <div class="row">
+                <div class="input-field">
+                    <label for="mensagem">Sua mensagem:</label>
+                    <textarea placeholder="Escreva sua mensagem" id="mensagem" name="mensagem" rows="8" type="text"  ></textarea>
+                </div>
+                
+            </div>
+
+            <div class="buttonForm">
+                <button type="submit" id="submitButton">Enviar mensagem</button>
+            </div> 
+
+        </form>
+
+    </div>
+   </section> 
+
+   <section class="address-map">
+    <div class="container">
+        <h2>Endereço</h2>
+    </div>
+
+    <div class="mapFlex">
+        <div id="map"></div>
+    </div>
+
+   </section>
+
+  </main>
+
+   <footer>
+    <div class="rowFooter">
+        
+        <div class="logoFooter">
+            <img src="./assets/logo.png"/>
+        </div>
+
+        <div class="footerContent">
+
+            <div class="links">
+                <h3>Links</h3>
+                  <ul>
+                    <li><a href="#hero"> Início</a> </li>
+                    <li><a href="#beneficios"> beneficios </a></li>
+                    <li><a href="#clientes"> clientes </a></li>
+                    <li><a href="#conheca"> Sobre a academia </a></li>
+                    <li><a href="#contato"> Contato </a></li>
+                    <li>Entrar</li>
+                  </ul>
+            </div>
+    
+            <div class="contatoFooter">
+                <h3>Nosso contato</h3>
+                <ul>
+                     <li> <i class="fa fa-envelope" aria-hidden="true"></i> 
+                        contato@smartfit.com</li>
+
+                     <li> <i class="fa fa-phone" aria-hidden="true"></i>
+                        (22) 99748-2589</li>
+                        
+                     <li> <i class="fa fa-map-marker" aria-hidden="true"></i>
+
+                        Campos dos Goytacazes</li>
+                </ul>
+
+                <ul class="socialMedia">
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i> 
+                        </a>
+
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://www.youube.com" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://www.twitter.com" target="_blank">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    
+
+
+                    </li>
+                </ul>
+            </div>
+    
+        </div>
+
+    </div>
+  </footer> 
+ </body>
+</html>

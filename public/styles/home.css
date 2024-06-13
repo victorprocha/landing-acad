@@ -1,0 +1,198 @@
+
+.hero {
+    top: 10vh;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:url(./../assets/hero.jpg);
+    background-size: cover;
+}
+
+.hero .text-content{
+    color:white;
+    text-align: center;
+}
+
+.hero .text-content h1{
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.hero .text-content h3{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.hero .text-content button{
+    width: 250px;
+    background-color:#b90000;
+    color: white;
+    border-radius: 999px;
+    font-size: 18px;
+    height: 50px;
+    border: 1px solid #b90000;
+    cursor: pointer;
+}
+
+.hero .text-content button:hover{
+    background-color: white;
+    border-color: white;
+    color:#b90000;
+    transition: 0.5s;
+}
+
+
+
+.conheca{
+    min-height: 80vh;    /*importante usar o min pra responsividade%*/
+}
+
+.conheca .text-content{
+    margin: 30px 0px 80px 0px;
+    text-align: center;
+}
+
+.conheca .text-content h2{
+   font-size: 3rem;
+   font-weight: bolder;
+}
+
+.conheca .text-content p{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.conheca .cards{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.conheca .cards .card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px 20px 10px 30px;
+    box-shadow: 2px 2px 6px 2px rgb(0, 0, 0, 0.4) ;
+    text-align: left;
+    width: 20%;
+    border-radius: 10px;
+    min-width: 100px;
+    height: 200px;
+}
+
+.conheca .cards .card .cardContent{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.conheca .cards .card .cardContent h3{
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+
+.fotos .container .text-content h2{
+    margin: 30px 0px 80px 0px;
+    text-align: center;
+}
+
+.fotos .container .text-content h2{
+    font-size: 3rem;
+   font-weight: bolder;
+}
+
+.fotos {
+    min-height: 80vh;  
+}
+
+
+.fotos .listPhotos{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fotos .listPhotos .gymPhoto{
+    width: 33%;
+    height: auto;
+}
+
+
+
+
+
+@media screen and (max-width: 992px){
+    
+    nav ul {
+        display: none;
+    }
+
+    nav .menu{
+        font-size: 2.5rem;
+        display: flex;
+        align-items: center;
+        color: white;
+        margin-right: 30px;
+        cursor: pointer;
+    }
+
+    .hero .text-content h1 {
+        font-size: 2.5rem;        
+    }
+    .hero .text-content h3{
+        font-size: 1.3rem;
+    }
+
+    .conheca .text-content h2{
+        font-size: 2rem;
+     }
+     
+     .conheca .text-content p{
+        font-size: 0.9rem;  
+     }
+
+     .conheca .cards .card .cardContent h3{
+        font-size: 1rem;
+    }
+    
+    .conheca .cards{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conheca .cards .card{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    
+    .fotos .container .text-content h2{
+        font-size: 2rem;
+    }
+
+    .fotos .listPhotos{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .fotos .listPhotos .gymPhoto{
+        width: 80%;
+        margin-bottom: 30px;
+        box-shadow: 3px 3px 6px 3px rgb(0, 0, 0, 0.5)
+    }
+
+
+
+}

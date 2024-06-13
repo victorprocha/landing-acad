@@ -1,0 +1,75 @@
+footer img{
+    margin-left: 20px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    height: 75.758px;
+}
+footer{
+    min-height: 30vh;
+    background-color: black;
+    margin-top: 17%;
+    padding: 40px 40px 0px 40px;
+}
+
+
+
+footer .rowFooter{
+    display: flex;
+    justify-content: flex-start;  /*aparentemente aproxima os conteudos*/
+}
+
+footer .rowFooter li{
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer .rowFooter li a{
+    color: white;
+    text-decoration: none;
+}
+
+footer .rowFooter li i{
+    color: #b90000;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+footer .rowFooter h3{
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+
+footer .rowFooter .footerContent{
+    display: flex;
+    justify-content: space-evenly; /*aparenta ter partes iguais vindo de um extremo*/
+    width: 80%;
+}
+
+
+@media screen and (max-width: 992px){
+    footer .rowFooter{
+        flex-direction: column;
+    }
+
+    footer .rowFooter .footerContent{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+    
+    footer .rowFooter .footerContent .contatoFooter{
+        margin-top: 30px;
+    }
+
+    footer .rowFooter .footerContent .contatoFooter li{
+        margin-bottom: 35px;
+    }
+
+    footer .rowFooter li {
+        margin-bottom: 15px;
+    }
+
+}
